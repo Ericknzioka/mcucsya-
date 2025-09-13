@@ -1,0 +1,489 @@
+/* ============================================
+   MCUCSYA Component-specific Styles
+   ============================================ */
+
+/* CSS Variables - Define these at the root if not already defined */
+:root {
+    --primary-color: #2c5530;
+    --secondary-color: #4a7c59;
+    --accent-color: #8fbc8f;
+    --white: #ffffff;
+    --light-bg: #f8f9fa;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --transition-normal: all 0.3s ease;
+    --border-radius: 8px;
+    --border-radius-small: 4px;
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Leadership Cards */
+.leadership-card {
+    text-align: center;
+    padding: 2rem;
+    transition: var(--transition-normal);
+    background: var(--white);
+}
+
+.leadership-card:hover {
+    background: linear-gradient(135deg, var(--light-bg), var(--white));
+}
+
+.leadership-card .card-img-top {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 2rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-normal);
+}
+
+.leadership-card:hover .card-img-top {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-heavy);
+}
+
+.leadership-card .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.leadership-card .card-text {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Constituency Cards */
+.constituency-card {
+    background: linear-gradient(135deg, var(--light-bg), var(--white));
+    border-left: 4px solid var(--primary-color);
+    transition: var(--transition-normal);
+    height: 100%;
+}
+
+.constituency-card:hover {
+    border-left-color: var(--accent-color);
+    background: linear-gradient(135deg, var(--white), var(--light-bg));
+    transform: translateY(-5px);
+}
+
+.constituency-card .card-title {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.constituency-card .card-title i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.constituency-card .card-text {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Event Cards */
+.event-card {
+    border-left: 4px solid var(--accent-color);
+    background: var(--white);
+    transition: var(--transition-normal);
+    height: 100%;
+}
+
+.event-card:hover {
+    border-left-color: var(--primary-color);
+    box-shadow: var(--shadow-heavy);
+}
+
+.event-date {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius-small);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-light);
+    width: 80px;
+}
+
+.event-date div:first-child {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.event-date div:nth-child(2) {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0.2rem 0;
+}
+
+.event-date div:last-child {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.event-card .card-title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.event-card .card-text {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.event-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.event-meta i {
+    margin-right: 0.3rem;
+    color: var(--accent-color);
+}
+
+/* Contact Info */
+.contact-info {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-info div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.contact-info i {
+    width: 20px;
+    margin-right: 0.8rem;
+    color: var(--primary-color);
+}
+
+/* Stats Cards */
+.stats-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-normal);
+}
+
+.stats-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-heavy);
+}
+
+.stats-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stats-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mission/Vision Cards */
+.mission-card {
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.05), rgba(74, 124, 89, 0.05));
+    border: 1px solid rgba(44, 85, 48, 0.1);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition-normal);
+    height: 100%;
+}
+
+.mission-card:hover {
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.1), rgba(74, 124, 89, 0.1));
+    transform: translateY(-5px);
+}
+
+.mission-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+    box-shadow: var(--shadow-medium);
+}
+
+.mission-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.mission-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Values List */
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius-small);
+    transition: var(--transition-normal);
+}
+
+.values-list li:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-light);
+    transform: translateX(5px);
+}
+
+.values-list i {
+    color: var(--success-color);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.values-list strong {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+/* Registration Form Specific */
+.registration-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 0;
+}
+
+.registration-header h4 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.registration-header i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    transition: var(--transition-normal);
+}
+
+.step.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.step.completed {
+    background: var(--success-color);
+    color: var(--white);
+}
+
+/* Breadcrumb */
+.breadcrumb-custom {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: var(--border-radius-small);
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-custom .breadcrumb {
+    margin: 0;
+    background: none;
+    padding: 0;
+}
+
+.breadcrumb-custom .breadcrumb-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
+    color: #666;
+}
+
+/* Loading States */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--light-bg);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Success Messages */
+.success-message {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border: 1px solid var(--success-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.success-message i {
+    font-size: 3rem;
+    color: var(--success-color);
+    margin-bottom: 1rem;
+}
+
+.success-message h4 {
+    color: var(--success-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Error Messages */
+.error-message {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    border: 1px solid var(--danger-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.error-message i {
+    font-size: 3rem;
+    color: var(--danger-color);
+    margin-bottom: 1rem;
+}
+
+.error-message h4 {
+    color: var(--danger-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-normal);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-heavy);
+}
